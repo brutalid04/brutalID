@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style1.css">
+    <title>Demo Bot Form</title>
+</head>
+
+<body>
+
+    <form>
+        <input type="text" id="nama" placeholder="Nama" />
+        <input type="text" id="pesan" placeholder="Pesan" />
+        <input type="button" class="button" id="kirim" value="KIRIM" onclick="kirimPesan()" /><br><br>
+        <a class="button1" href="index.html" >Back To Home</a>
+    </form>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+    integrity="sha512-+NqPlbbtM1QqiK8ZAo4Yrj2c4lNQoGv8P79DPtKzj++l5jnN39rHA/xsqn8zE9l0uSoxaCdrOgFs6yjyfbBxSg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    function kirimPesan() {
+
+    var nama = document.getElementById('nama');
+    var email = document.getElementById('email');
+    var pesan = document.getElementById('pesan');
+
+    var gabungan = 'Nama%3A%0A' + nama.value + '%0APesan%3A%0A' + pesan.value;
+
+    var token = '5655057589:AAETnjxZwtZG7GiV2RvZ13V5qdvFxKwaJ2g'; // Ganti dengan token bot yang kamu buat
+    var grup = '5272925625'; // Ganti dengan chat id dari bot yang kamu buat
+
+    $.ajax({
+        url: `https://api.telegram.org/bot${token}/sendMessage?chat_id=${grup}&text=${gabungan}&parse_mode=html`,
+        method: `POST`,
+    })
+}
+</script>
+</html>

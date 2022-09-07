@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+	<title>
+		brutal_ID
+	</title>
+</head>
+<body>
+	<header>
+		<h3 class="logo">brutal_ID</h3>
+		<div>
+			<nav>
+				<ul><li><a class="head-nav" href="profile.html">profil</a></li></ul>
+				<ul><li><a href="contack.html">Contak</a></li></ul>
+				<ul><li><a href="more.html">More</a></li></ul>
+			</nav>
+		</div>
+	</header>
+	<div class="awak">
+	<div class="container">
+		<div class="intro">
+			<p class="title">Hello <i id="kenal"></i></p>
+			<p class="title1"> Welcome To my Website</p>
+			<div class="foto-1">
+				<img src="png/brutal.gif" alt="request eror" class="img-foto"/>
+			</div>
+			<p class="text">Website Ini Di Buat Untuk Belajar Html, Css, Js</p>
+			<p class="text">Clik Button Di Bawah Untuk Kirim Pesan</p>
+			<a class="button1" href="pesan.html" >Pesan</a>
+			<p class="title2">Musik Ngab</p>
+			<audio id="audio" controls hidden>
+				<source src="musik/brutal.mp3" type="audio/mpeg">
+			</audio>
+			<div>
+				<button class="musik" id="play">♫ play</button>
+				<button class="musik" id="pause">♫ paus</button>
+			</div>
+			<p>
+			    
+			</p>
+			<p>
+			    
+			</p>
+			<p>
+			    
+			</p>
+		</div>
+	</div>
+	<div class="parallax">
+		<div class="tentang">
+			<p class="text">Saya Adallah Seorang <span id="saha"></span></p>
+			<p class="text">Tapi Terkadang Saya Suka Menjadi Beban </p>
+		<div class="btn">
+			<button class="btn-1" onclick="btn()">Game ?</button>
+		</div>
+		</div>
+		<div class="kata2">
+			<p class="motiv">Motivasi</p>
+		</div>
+		<div class="container1">
+			<div class="card">
+				<div class="card-item">
+					<p class="text">*Agama</p>
+					<p class="text">Hal pertama yang harus kita perhatikan adallah Agama karna itu nomer 1</p>
+				</div>
+				<div class="card-item">
+					<p class="text">*Semangat</p>
+					<p class="text">Sebagai manusia kita harus menanamkan rasa semangat di dalam diri kita </p>
+				</div>
+				<div class="card-item">
+					<p class="text">*Belajar</p>
+					<p class="text">Belajar adallah sesuatu yang mengubah kita dari tidak bisa menjadi bisa</p>
+				</div>
+		</div>
+		</div>
+	</div>
+	</div>
+	<div class="bawah">
+		<p class="text-bawah">Copyright * <script type="text/javascript">document.write(new Date().getFullYear()) </script> by Brutal_ID</p>
+	</div>
+	<script type="text/javascript" charset="utf-8">
+		var nama = prompt("Siapa Nama Kamu", "");
+		alert("Apa Kabar "+nama+" ?\nSemoga Harimu Selalu Senin");
+		document.getElementById('kenal').innerText = nama;
+		function btn() {
+			swal("My Game", "FREE FIRE\nMOBILEGENDS\nPUBGMOBILE\nDLL");
+		}
+
+		var pla = document.getElementById("play");
+		var paus = document.getElementById("pause");
+		var audio = document.getElementById("audio");
+		pla.addEventListener("click", function (){
+			audio.play();
+		});
+		paus.addEventListener("click", function (){
+			audio.pause();
+		});
+
+		new Typed('#saha', {
+			strings: ['Gamers', 'Develover','Editor', "Design"],
+			typeSpeed: 60,
+			backSpeed: 70,
+			smartBackspace: true,
+			loop: true
+		});
+	</script>
+</body>
+</html>
